@@ -16,20 +16,153 @@
 </head>
 <body>
 
+
   <header>
-    <h1>My first project</h1>
-  </header>
+    <nav class="navigation">
+        <ul class="navigation__li">
+            <li class="navigation__el"><a href="index.html"><img src="assets/images/B74.svg" alt="B74 en bleu"></a></li>
+            <li class="navigation__el">
+              <button class="menu-toggle" id="menu-toggle">
+                <div class="burger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </button>
+            </li>
+               <li class="navigation__el">
+                <ul class="navigation-desktop__li">
+                    <li class="navigation-desktop__el navigation-desktop__el--active"><a href="#projet">CONTEXTE</a></li>
+                    <li class="navigation-desktop__el"><a href="#solution">L’HANDISPORT</a></li>
+                    <li class="navigation-desktop__el"><a href="#solution">SOLUTION</a></li>
+                    <li class="navigation-desktop__el"><a href="#equipe">USER JOURNEY</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu"> 
+            <ul class="menu__liste">
+                <li class="menu__el"><a href="#projet">CONTEXTE</a></li>
+                <li class="menu__el"><a href="#contexte">L’HANDISPORT</a></li>
+                <li class="menu__el"><a href="#solution">SOLUTION</a></li>
+                <li class="menu__el"><a href="#equipe">USER JOURNEY</a></li>
 
-  <main>
-    <section>
-      <h2>My first section</h2>
-      <p>My first paragraph</p>
-    </section>
-  </main>
+            </ul>
+        </div>
+    </nav>
 
-  <footer>
-    <p>&copy; 2021</p>
-  </footer>
+
+</header>
+
+<main>
+<div class="slider">
+   
+    <ul class="slider__list">
+         
+        <li id="projet" class="slider__el slider__el--show">
+                <div class="slider-content__all">
+                    <h2 class="slider-content__title">PROJET</h2>
+                    <ul class="slider-content__list">
+                        <li class="slider-content__el">
+                            <ul class="slider-text__list">
+                                <li class="slider-text__el slider-text__el--grand"><p>Dans le cadre de l’atelier ILAB, nous avons été amenés à nous questionner sur le sujet
+                                   des personnes à mobilité réduite afin de promouvoir des solutions pour améliorer leur accessibilité au quotidien.</p></li>
+                                <li class="slider-text__el"><p>ILAB est un atelier qui est à la conception de solutions interactives au service de l'accessibilité dont le but est de proposer
+                                   des solutions innovantes sur un sujet particulier à travers une expérience immersive et accessible à tous et toutes.</p></li>
+                                   <li class="slider-text__el slider-text__el--grand"><p>Nous avons décidé de nous intéresser au sujet de l’handisport et des solutions mises en place dans ce domaine pour permettre aux personnes à mobilités réduites un accès à la discipline sportive. En effet,
+                                     l’handisport souffre d'un certain manque de sensibilisation et il nous paraît important de travailler dessus durant cet atelier.</p></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            
+        </li>
+
+        <li id="contexte" class="slider__el">
+            <div class="slider-content__all">
+                <h2 class="slider-content__title">Contexte</h2>
+                <ul class="slider-content__list">
+                    <li class="slider-content__el">
+                        <ul class="slider-text__list slider-text__list--contexte">
+                            <li class="slider-text__el "><p>Lors de la conception d’un site web, il n’est pas aisé pour nous, élèves, d’avoir en tête tous les&nbsp;éléments essentiels à&nbsp;ne&nbsp;pas&nbsp;oublier. Afin&nbsp;de&nbsp;remédier à&nbsp;cela, nous avons mis au point la&nbsp;Borne&nbsp;B74.</p></li>
+                            <li class="slider-text__el slider-text__el--moyen"><p>Ce dispositif permet aux&nbsp;étudiants de&nbsp;vérifier si rien n’est oublié et retrouver les&nbsp;détails qui pourraient manquer dans&nbsp;leur&nbsp;travail.</p></li>
+                        </ul>
+                    </li>
+                    <li class="slider-content__el--img"><img class="slider__img" src="assets/images/contexte.jpg" srcset="assets/images/contexte@2x.jpg 2x" alt="photo du dispositif de la borne éteinte. écran posé sur un bras mural sur un poteau jaune"></li>
+                </ul>
+            </div>
+        
+        </li>
+
+        <li id="solution" class="slider__el">
+            <div class="slider-content__all">
+                <h2 class="slider-content__title">Solution</h2>
+                <ul class="slider-content__list slider-content__list--solution">
+                    <li class="slider-content__el">
+                        <ul class="slider-text__list slider-text__list--dispositif">
+                            <li class="slider-text__el"><p>L’handisport regroupe des disciplines sportives adaptées aux personnes en situation de handicap, qu'elles soient physiques, sensorielles ou intellectuelles. Malgré l'importance croissante de ces sports, l’handisport souffre encore d'un manque de visibilité et de sensibilisation, comme en témoigne la faible couverture médiatique des Jeux Paralympiques comparée à celle des Jeux Olympiques. </p></li>
+                        </ul>
+                    </li>
+
+                    
+                </ul>
+            </div>
+        </li>
+
+        <li id="equipe" class="slider__el">
+            <div class="slider-content__all">
+                <h2 class="slider-content__title">Équipe</h2>
+                <ul class="slider-content__list slider-content__list--team">
+                    <li class="slider-content__el">
+                        <ul class="slider-team__li">
+                            <li class="slider-team__el">
+                                <img class="img-team" src="assets/images/pp_salwa.jpg" srcset="assets/images/pp_salwa@2x.jpg 2x" alt="Pp de salwa">
+                                <p class="text-team">Salwa B.</p>
+                            </li>
+                            <li class="slider-team__el">
+                                <img class="img-team" src="assets/images/ines.jpg" srcset="assets/images/ines@2x.jpg 2x" alt="bonhomme avec grosse oreille et chapeau pointu">
+                                <p class="text-team">Ines D.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="slider-content__el">
+                        <ul class="slider-team__li">
+                            <li class="slider-team__el">
+                                <img class="img-team" src="assets/images/pp_max.jpg" srcset="assets/images/pp_max@2x.jpg 2x" alt="Gojo satoru">
+                                <p class="text-team">Maxime B.</p>
+                            </li>
+                            <li class="slider-team__el">
+                                <img class="img-team" src="assets/images/pp_gui.jpg"  srcset="assets/images/pp_gui@2x.jpg 2x" alt="illustration d'un homme avec cehveux court brun et des lunettes">
+                                <p class="text-team">Guillaume C.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+
+        
+    </ul>
+</div>
+
+<ul class="indicator__list">
+  <li class="indicator__el indicator__el--active"></li>
+  <li class="indicator__el"></li>
+  <li class="indicator__el"></li>
+  <li class="indicator__el"></li>
+
+</ul>
+
+</main>
+<footer>
+<ul class="footer__list">
+
+    <li class="footer__el"><img src="assets/images/dwt.svg" alt="logo dwt écrits avec une barre jaune à l'horizontale à côté du T"></li>
+    <li class="footer__el"><small>©2024 ILAB-DWT</small></li>
+    <li class="footer__el"><a href="credits.html">Crédits</a></li>
+</ul>
+</footer>
+
 
 </body>
 </html>
