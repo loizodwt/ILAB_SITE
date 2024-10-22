@@ -2,6 +2,38 @@
 @import 'components/type';
 @import 'components/fonts';
 
+
+
+
+
+
+
+
+
+
+
+
+.video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -80,7 +112,7 @@ body {
         height: 100vh;
         background-color: #333;
         align-items: center;
-        z-index: 9998; // Fixe le problème de superposition
+        z-index: 9998; 
     }
 
     .navbar__menu.is-active {
@@ -149,7 +181,7 @@ body {
                 display: block;
                 margin: 0 auto;
                 margin-top: 3vh;
-                width: 10px; 
+                width: 30px; 
                 height: auto;
             }
         }
