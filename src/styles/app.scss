@@ -194,55 +194,95 @@ body {
 
 
 
-
-
 .contexte {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     color: #fff;
-    
-
+  
     &__number {
-        margin: 0%;
-        font-size: $size-number-mobile;
-        margin-bottom: 10px;
+      margin: 0;
+      font-size: $size-number-mobile;
+      margin-bottom: 10px;
     }
-
+  
     &__title {
-        margin: 0%;
-        font-size: $size-title-mobile;
-        margin-bottom: 20px;
+      margin: 0;
+      font-size: $size-title-mobile;
+      margin-bottom: 20px;
     }
-
+  
     &__text {
-        font-size: 1rem; 
-        line-height: 1.5;
-        margin-bottom: 15px;
-
-        &--small {
-            font-size: 0.8rem; 
-
-            &::after {
-                content: url('../assets/images/croix.svg'); 
-                display: block;
-                margin: 0 auto;
-                margin-top: 3vh;
-                width: 30px; 
-                height: auto;
-            }
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      max-width: 800px;
+  
+      &--small {
+        font-size: 0.8rem;
+  
+        &::after {
+          content: url('../assets/images/croix.svg');
+          display: block;
+          margin: 0 auto;
+          margin-top: 3vh;
+          width: 30px;
+          height: auto;
         }
-
-
-
+      }
     }
+    @media (min-width: 769px) {
+        margin-top: 10vh;
+        display: grid;
+        grid-template-columns: 1fr 1.1fr 1.1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "number text-1 text-1 text-1 . . ."
+          "number text-1 text-1 text-1 . . ."
+          "title text2 text2 text2 . . ."
+          "title text2 text2 text2 . . ."
+          "title . . . text3 text3 text3"
+          "title . . . text3 text3 text3"
+          "title . . . text3 text3 text3";
+    
+        &__number {
+          grid-area: number;
+          font-size: 40px; // Adapter la taille pour desktop si besoin
+          display: block;
+          margin: 0 auto;
+        }
+    
+        &__title {
+          grid-area: title;
+          writing-mode: vertical-rl;
+          transform: rotate(180deg);
+          display: block;
+          margin: 0 auto;
+        }
+    
+        &__text--1 {
+          grid-area: text-1;
+        }
+    
+        &__text--2 {
+          grid-area: text2;
+        }
+    
+        &__text--3 {
+          grid-area: text3;
+        }
+      }
+  }
+  
 
-    &::after {
-        content:"↓";
-        font-size: xx-large;
-     }
-}
+
+
+
+
 
 
 
