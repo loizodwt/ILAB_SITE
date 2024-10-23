@@ -117,7 +117,9 @@ body {
         align-items: center;
         z-index: 9998; 
     }
-
+    .navbar__link {
+        font-size: 28px;
+    }
     .navbar__menu.is-active {
         display: flex;
     }
