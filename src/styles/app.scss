@@ -258,8 +258,8 @@ body {
     
         &__title {
           grid-area: title;
-          writing-mode: vertical-rl;
-          transform: rotate(180deg);
+          writing-mode: vertical-rl; 
+          text-orientation: upright;
           display: block;
           margin: 0 auto;
         }
