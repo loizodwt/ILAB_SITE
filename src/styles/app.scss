@@ -105,6 +105,7 @@ body {
     .navbar__toggle {
         display: flex;
         justify-content: flex-start;
+        transform: translateY(-10vh);
     }
 
     .navbar__menu {
