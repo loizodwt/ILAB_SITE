@@ -147,10 +147,45 @@ body {
 }
 
 
+.navbar__svg {
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+
+@media (min-width: 769px) {
+    .navbar__svg--left {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .navbar__svg--right {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .navbar__item {
+        display: flex;
+        align-items: center;
+    }
+}
 
 
 
 
+/* Pour mettre le lien actif en gras */
+.navbar__link.active {
+    font-weight: bold;
+}
+
+/* Transition pour la fermeture fluide du menu burger */
+.navbar__menu {
+    transition: all 0.3s ease;
+}
+
+.navbar__menu.is-active {
+    display: flex; /* Quand le menu burger est actif */
+}
 
 
 
