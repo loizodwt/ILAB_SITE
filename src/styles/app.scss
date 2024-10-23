@@ -364,7 +364,6 @@ body {
 
 
 
-
 footer {
     padding: 20px 0; 
 
@@ -379,5 +378,18 @@ footer {
     .footer-item {
         flex: 1; 
         text-align: center;
+        height: 20px; // Définit une hauteur fixe pour égaliser les tailles
+        width: auto;
+
+        // Cible le SVG à l'intérieur de l'élément footer-item
+        svg {
+           
+            height: 100%; // Adapte la hauteur du SVG à celle de l'élément footer-item
+            width: auto; // Garde le ratio
+        }
     }
+    .dwt path {
+        fill: white; /* Change la couleur des chemins en blanc */
+    }
+    
 }
