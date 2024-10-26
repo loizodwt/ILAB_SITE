@@ -206,6 +206,8 @@ body {
     padding: 20px;
     color: #fff;
 
+    background-image: none;
+
     .deco_contexte--1{
         margin: 0;
         display: flex;
@@ -245,6 +247,14 @@ body {
       }
     }
     @media (min-width: 1200px) {
+        background-image: url('../assets/images/section1.svg');
+        background-repeat: no-repeat;
+        background-position: top 10vh right ; /* Positionnement en haut à droite */
+        background-size: 300px 300px; /* Taille de 300px par 300px */
+        
+
+
+
         margin-top: 10vh;
         display: grid;
         grid-template-columns: repeat(7, 1fr); // 7 colonnes
@@ -374,8 +384,8 @@ body {
      @media (min-width: 1200px) {
 
         display: grid;
-        grid-template-columns: repeat(7, 1fr); // 7 colonnes
-        grid-template-rows: repeat(3, 1fr); // 3 lignes
+        grid-template-columns: repeat(7, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
         gap: 0px;
         grid-template-areas:
             "number handisport__text--1 handisport__text--1 handisport__text--1 . . ."
