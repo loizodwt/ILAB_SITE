@@ -2,38 +2,24 @@
 @import 'components/type';
 @import 'components/fonts';
 
-
-
-
-
 html {
     scroll-behavior: smooth;
 }
-
-
-
 
 body {
     margin: 0;
     color: white;
     font-family: 'ClashDisplay';
-  
-}
 
-body.no-scroll {
-    overflow: hidden;
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
-
 
 p {
     max-width: 1200px;
     font-family: "Atkinson Hyperlegible", "Clash Display";
 }
-
-
-
-
-
 
 .video-background {
     position: fixed;
@@ -47,177 +33,151 @@ p {
     transform: translate(-50%, -50%);
 }
 
-
-
-
-
-
-
-
 .main__title {
     display: flex;
     justify-content: center;
     margin-top: 10vh;
     font-size: 38px;
 
-
     @media (min-width: 1200px) {
         font-size: 64px;
     }
-
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrer la navbar en desktop */
+    justify-content: center; // Centrer la navbar en desktop
     padding: 10px 20px;
     position: fixed;
-    width: 100%; /* Pour s'assurer qu'elle occupe toute la largeur */
-}
+    width: 100%; // Pour s'assurer qu'elle occupe toute la largeur
 
-.navbar__brand {
-    font-size: 24px;
-}
-
-.navbar__toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    transition: transform 0.3s;
-    z-index: 9999;
-}
-
-.navbar__line {
-    height: 2px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
-    transition: all 0.3s ease;
-}
-
-.navbar__menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    flex-grow: 1;
-
-    
-}
-
-.navbar__item {
-    padding-left: 30px;
-    border-radius: 100px;
-    background-color: rgba(109, 23, 140, 0); 
-    backdrop-filter: blur(2px);
-}
-
-.navbar__link {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-
- 
-}
-
-@media (max-width: 1200px) {
-    .navbar {
-        justify-content: flex-start;
-    }
-    .navbar__toggle {
-        display: flex;
-        justify-content: flex-start;
-        transform: translateY(-10vh);
+    &__brand {
+        font-size: 24px;
     }
 
-    .navbar__menu {
+    &__toggle {
         display: none;
         flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: #6d178c;
-        align-items: center;
-        z-index: 9998; 
-    }
-    .navbar__link {
-        font-size: 28px;
-    }
-    .navbar__menu.is-active {
-        display: flex;
+        cursor: pointer;
+        transition: transform 0.3s;
+        z-index: 9999;
+
+        &.is-active {
+            transform: rotate(180deg);
+            transform: translateY(-10vh);
+        }
     }
 
-    .navbar__item {
-        margin: 3rem 0;
+    &__line {
+        height: 2px;
+        width: 25px;
+        background-color: white;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+
+        &--1.is-active {
+            transform: rotate(45deg) translate(5px, 9px);
+        }
+
+        &--2.is-active {
+            opacity: 0;
+        }
+
+        &--3.is-active {
+            transform: rotate(-45deg) translate(5px, -9px);
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        flex-grow: 1;
+
+        &.is-active {
+            display: flex; // Quand le menu burger est actif
+        }
+
+        @media (max-width: 1200px) {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #6d178c;
+            align-items: center;
+            z-index: 9998;
+        }
+    }
+
+    &__item {
+        padding-left: 30px;
+        border-radius: 100px;
+        background-color: rgba(109, 23, 140, 0);
+        backdrop-filter: blur(2px);
         text-align: center;
+
+        @media (max-width: 1200px) {
+            margin: 3rem 0;
+        }
+
+        @media (min-width: 1200px) {
+            display: flex;
+            align-items: center;
+        }
     }
 
-    .navbar__toggle.is-active {
-        transform: rotate(180deg);
-        transform: translateY(-10vh);
+    &__link {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+
+        &.active {
+            font-weight: bold; // Pour mettre le lien actif en gras
+        }
+
+        @media (max-width: 1200px) {
+            font-size: 28px;
+        }
     }
 
-    .navbar__line--1.is-active {
-        transform: rotate(45deg) translate(5px, 9px);
-        
+    &__svg {
+
+        width: 50px;
+        height: 50px;
+
+        &--left {
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        &--right {
+            display: inline-block;
+            margin-left: 30px;
+        }
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
     }
 
-    .navbar__line--2.is-active {
-        opacity: 0;
-    }
+    @media (max-width: 1200px) {
+        justify-content: flex-start;
 
-    .navbar__line--3.is-active {
-        transform: rotate(-45deg) translate(5px, -9px);
+        &__toggle {
+            display: flex;
+            justify-content: flex-start;
+            transform: translateY(-10vh);
+        }
     }
 }
-
-
-.navbar__svg {
-    display: none;
-    width: 50px;
-    height: 50px;
-}
-
-@media (min-width: 1200px) {
-    .navbar__svg--left {
-        display: inline-block;
-        margin-right: 30px;
-    }
-
-    .navbar__svg--right {
-        display: inline-block;
-        margin-left: 30px;
-    }
-
-    .navbar__item {
-        display: flex;
-        align-items: center;
-    }
-}
-
-
-
-
-/* Pour mettre le lien actif en gras */
-.navbar__link.active {
-    font-weight: bold;
-}
-
-/* Transition pour la fermeture fluide du menu burger */
-.navbar__menu {
-    transition: all 0.3s ease;
-}
-
-.navbar__menu.is-active {
-    display: flex; /* Quand le menu burger est actif */
-}
-
 
 
 .contexte {
@@ -278,13 +238,13 @@ p {
 
         margin-top: 10vh;
         display: grid;
-        grid-template-columns: repeat(7, 1fr); 
+        grid-template-columns: repeat(6, 1fr); 
         grid-template-rows: repeat(3, 1fr); 
         gap: 0px;
         grid-template-areas:
-          "number text-1 text-1 text-1 . . ."
-          "title text2 text2 text2 . . ."
-          "title . . . text3 text3 text3"; 
+          "number text-1 text-1 . . . "
+          "title text2 text2 . . . "
+          "title . .  text3 text3 ."; 
     
         &__number {
           grid-area: number;
