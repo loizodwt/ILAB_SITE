@@ -505,17 +505,22 @@ body {
                   }
     
             &__text {
-                &--3 {
-                    grid-area: text3; 
-                }
-    
-                &--small {
-                    grid-area: textsmall; 
-                }
+           
+           
     
                 &--1 {
                     grid-area: text1; 
+                    font-size: 20px;
                 }
+                &--small {
+                    grid-area: textsmall; 
+                    font-size: 16px;
+                }
+                &--3 {
+                    grid-area: text3; 
+                    font-size: 20px;
+                }
+    
             }
     
             &__img {
