@@ -200,6 +200,13 @@ body {
     align-items: center;
     padding: 20px;
     color: #fff;
+
+    .deco_contexte--1{
+        margin: 0;
+        display: flex;
+        justify-content: start;
+      }
+
   
     &__number {
       margin: 0;
@@ -280,6 +287,7 @@ body {
       &__text {
 
     
+
         &--small {
 
     
@@ -294,11 +302,12 @@ body {
           }
         }
       }
+
   }
   
 
 
-
+      
 
 
 
@@ -328,6 +337,22 @@ body {
         font-size: 1rem; 
         line-height: 1.5;
         margin-bottom: 15px;
+
+       
+        &--1 {
+            
+          &::before {
+            content: url('../assets/images/croix.svg');
+            display: block;
+            margin-left: auto;  // ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+            margin-right: 0;
+            margin-top: 3vh;
+            width: fit-content;
+            height: auto;
+          }
+            
+        }
+
 
         &--big {
             font-size: 1.5rem; 
@@ -372,6 +397,28 @@ body {
     padding: 20px;
     color: #fff;
 
+
+
+
+
+
+
+    &__deco {
+        display: flex;
+        justify-content: space-between; 
+        width: 100%; 
+        @media (min-width: 769px) {
+          display: none;
+
+        }
+        &--1,
+        &--2 {
+            margin: 0; 
+        }
+    }
+    
+    
+
     &__number {
         margin: 0%;
         font-size: $size-number-mobile;
@@ -401,6 +448,11 @@ body {
         content:"↓";
         font-size: xx-large;
      }
+
+
+
+
+
 }
 
 
