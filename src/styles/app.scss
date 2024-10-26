@@ -11,17 +11,28 @@ html {
 }
 
 
-p {
-    max-width: 1200px;
+
+
+body {
+    margin: 0;
+    color: white;
+    font-family: 'ClashDisplay';
+  
 }
-
-
-
-
 
 body.no-scroll {
     overflow: hidden;
 }
+
+
+p {
+    max-width: 1200px;
+    font-family: "Atkinson Hyperlegible", "Clash Display";
+}
+
+
+
+
 
 
 .video-background {
@@ -43,17 +54,17 @@ body.no-scroll {
 
 
 
-
-
-body {
-    margin: 0;
-    color: white;
-}
-
 .main__title {
     display: flex;
     justify-content: center;
     margin-top: 10vh;
+    font-size: 38px;
+
+
+    @media (min-width: 1200px) {
+        font-size: 64px;
+    }
+
 }
 
 .navbar {
@@ -101,6 +112,9 @@ body {
 .navbar__link {
     color: white;
     text-decoration: none;
+    font-size: 20px;
+
+ 
 }
 
 @media (max-width: 1200px) {
@@ -228,13 +242,13 @@ body {
     }
   
     &__text {
-      font-size: 1rem;
+      font-size: $size-text-mid-mobile;
       line-height: 1.5;
       margin-bottom: 15px;
       max-width: 800px;
   
       &--small {
-        font-size: 0.8rem;
+        font-size: $size-text-small-mobile;
         &::after {
             content: url('../assets/images/croix.svg');
             display: block;
@@ -249,21 +263,21 @@ body {
     @media (min-width: 1200px) {
         background-image: url('../assets/images/section1.svg');
         background-repeat: no-repeat;
-        background-position: top 10vh right ; /* Positionnement en haut à droite */
-        background-size: 300px 300px; /* Taille de 300px par 300px */
+        background-position: top 10vh right ;
+        background-size: 300px 300px;
         
 
 
 
         margin-top: 10vh;
         display: grid;
-        grid-template-columns: repeat(7, 1fr); // 7 colonnes
-        grid-template-rows: repeat(3, 1fr); // 3 lignes
+        grid-template-columns: repeat(7, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
         gap: 0px;
         grid-template-areas:
           "number text-1 text-1 text-1 . . ."
           "title text2 text2 text2 . . ."
-          "title . . . text3 text3 text3"; // Simplifié pour 3 lignes
+          "title . . . text3 text3 text3"; 
     
         &__number {
           grid-area: number;
@@ -296,10 +310,11 @@ body {
 
       &__text {
 
-    
+         font-size: $size-text-mid-desktop;
 
         &--small {
 
+            font-size: $size-text-small-desktop;
     
           &::after {
             content: url('../assets/images/croix.svg');
@@ -344,7 +359,7 @@ body {
     }
 
     &__text {
-        font-size: 1rem; 
+        font-size: $size-text-mid-mobile; 
         line-height: 1.5;
         margin-bottom: 15px;
 
@@ -365,7 +380,7 @@ body {
 
 
         &--big {
-            font-size: 1.5rem; 
+            font-size: $size-text-big-mobile; 
         }
 
 
@@ -409,6 +424,7 @@ body {
     
         &__text--1 {
             grid-area: handisport__text--1;
+            font-size: $size-text-mid-desktop;
         }
     
         &__img {
@@ -417,6 +433,8 @@ body {
     
         &__text--big {
             grid-area: handisport__text--big;
+            font-size: $size-text-big-desktop;
+            font-weight: bold;
         }
     
     
