@@ -38,6 +38,7 @@ p {
     display: flex;
     justify-content: center;
     margin-top: 10vh;
+    margin-bottom: 10vh;
     font-size: 38px;
 
     @media (min-width: 1200px) {
@@ -48,10 +49,10 @@ p {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: center; // Centrer la navbar en desktop
+    justify-content: center; 
     padding: 10px 20px;
     position: fixed;
-    width: 100%; // Pour s'assurer qu'elle occupe toute la largeur
+    width: 100%;
 
     &__brand {
         font-size: 24px;
@@ -126,6 +127,7 @@ p {
         text-align: center;
 
         @media (max-width: 1200px) {
+            padding: 0;
             margin: 3rem 0;
         }
 
@@ -141,7 +143,7 @@ p {
         font-size: 20px;
 
         &.active {
-            font-weight: bold; // Pour mettre le lien actif en gras
+            font-weight: bold; 
         }
 
         @media (max-width: 1200px) {
@@ -708,18 +710,17 @@ footer {
     .footer-item {
         flex: 1; 
         text-align: center;
-        height: 20px; // Définit une hauteur fixe pour égaliser les tailles
+        height: 20px;
         width: auto;
 
-        // Cible le SVG à l'intérieur de l'élément footer-item
         svg {
            
-            height: 100%; // Adapte la hauteur du SVG à celle de l'élément footer-item
-            width: auto; // Garde le ratio
+            height: 100%; 
+            width: auto; 
         }
     }
     .dwt path {
-        fill: white; /* Change la couleur des chemins en blanc */
+        fill: white; 
     }
     
 }
