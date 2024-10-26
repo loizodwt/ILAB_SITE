@@ -367,13 +367,13 @@ p {
      @media (min-width: 1200px) {
 
         display: grid;
-        grid-template-columns: repeat(7, 1fr); 
+        grid-template-columns: repeat(6, 1fr); 
         grid-template-rows: repeat(3, 1fr); 
         gap: 0px;
         grid-template-areas:
-            "number handisport__text--1 handisport__text--1 handisport__text--1 . . ."
-            "title handisport__img handisport__img handisport__img . . ."
-            "title  handisport__text--big handisport__text--big handisport__text--big . . .";
+            "number handisport__text--1 handisport__text--1 handisport__text--1 . . "
+            "title handisport__img handisport__img handisport__img . . "
+            "title  handisport__text--big handisport__text--big handisport__text--big . . ";
     
             &__number {
                 grid-area: number;
@@ -518,13 +518,13 @@ p {
         background-position: top 10vh right 30vh;
   
             display: grid;
-            grid-template-columns: 1fr 1.1fr 1.1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            gap: 0px 0px;
+            grid-template-columns: repeat(6, 1fr); 
+            grid-template-rows: repeat(3, 1fr); 
+            gap: 0px;
             grid-template-areas:
-                "number text1 text1 text1 text1 deco ."
-                "title img img textsmall textsmall deco ."
-                "title text3 text3 text3 text3 text3 .";
+                "number text1 text1 text1 text1 deco "
+                "title img img textsmall textsmall deco "
+                "title text3 text3 text3 text3 text3 ";
     
                 &__number {
                     grid-area: number;
