@@ -190,6 +190,13 @@ p {
 
     background-image: none;
 
+    
+    &::after {
+        content:"↓";
+        font-size: xx-large;
+     }
+
+
     .deco_contexte--1{
         margin: 0;
         display: flex;
@@ -227,6 +234,29 @@ p {
           
       }
     }
+
+
+    &__text {
+
+        font-size: $size-text-mid-desktop;
+
+       &--small {
+
+           font-size: $size-text-small-desktop;
+   
+         &::after {
+           content: url('../assets/images/croix.svg');
+           display: block;
+           margin-left: auto;  // ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+           margin-right: 0;
+           margin-top: 3vh;
+           width: fit-content;
+           height: auto;
+         }
+       }
+     }
+
+
     @media (min-width: 1200px) {
         background-image: url('../assets/images/section1.svg');
         background-repeat: no-repeat;
@@ -273,28 +303,17 @@ p {
         &__text--3 {
           grid-area: text3;
         }
+
+        
+      &::after {
+        display: none;
+      }
+ 
     }
     
 
-      &__text {
 
-         font-size: $size-text-mid-desktop;
 
-        &--small {
-
-            font-size: $size-text-small-desktop;
-    
-          &::after {
-            content: url('../assets/images/croix.svg');
-            display: block;
-            margin-left: auto;  // ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-            margin-right: 0;
-            margin-top: 3vh;
-            width: fit-content;
-            height: auto;
-          }
-        }
-      }
 
   }
   
@@ -587,6 +606,7 @@ p {
 
 
 .userjourney {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
