@@ -103,7 +103,7 @@ body {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .navbar {
         justify-content: flex-start;
     }
@@ -163,7 +163,7 @@ body {
     height: 20px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
     .navbar__svg--left {
         display: inline-block;
         margin-right: 10px;
@@ -244,22 +244,16 @@ body {
           
       }
     }
-    @media (min-width: 769px) {
+    @media (min-width: 1200px) {
         margin-top: 10vh;
         display: grid;
-        grid-template-columns: 1fr 1.1fr 1.1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-auto-columns: 1fr;
+        grid-template-columns: repeat(7, 1fr); // 7 colonnes
+        grid-template-rows: repeat(3, 1fr); // 3 lignes
         gap: 0px;
-        grid-auto-flow: row;
         grid-template-areas:
           "number text-1 text-1 text-1 . . ."
-          "number text-1 text-1 text-1 . . ."
           "title text2 text2 text2 . . ."
-          "title text2 text2 text2 . . ."
-          "title . . . text3 text3 text3"
-          "title . . . text3 text3 text3"
-          "title . . . text3 text3 text3";
+          "title . . . text3 text3 text3"; // Simplifié pour 3 lignes
     
         &__number {
           grid-area: number;
@@ -287,7 +281,8 @@ body {
         &__text--3 {
           grid-area: text3;
         }
-      }
+    }
+    
 
       &__text {
 
@@ -376,15 +371,56 @@ body {
      
 
 
+     @media (min-width: 1200px) {
+
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); // 7 colonnes
+        grid-template-rows: repeat(3, 1fr); // 3 lignes
+        gap: 0px;
+        grid-template-areas:
+            "number handisport__text--1 handisport__text--1 handisport__text--1 . . ."
+            "title handisport__img handisport__img handisport__img . . ."
+            "title  handisport__text--big handisport__text--big handisport__text--big . . .";
+    
+            &__number {
+                grid-area: number;
+                font-size: 40px;
+                display: block;
+                margin: 0 auto;
+              }
+          
+              &__title {
+                grid-area: title;
+                writing-mode: vertical-rl; 
+                text-orientation: upright;
+                display: block;
+                margin: 0 auto;
+              }
+    
+        &__text--1 {
+            grid-area: handisport__text--1;
+        }
+    
+        &__img {
+            grid-area: handisport__img;
+        }
+    
+        &__text--big {
+            grid-area: handisport__text--big;
+        }
+    
+    
 
 
 
+        &::after {
+            display: none;
+         }
+    
 
 
 
-
-
-
+        }
 
 
 
@@ -403,7 +439,7 @@ body {
     color: #fff;
 
 
-
+    background-image: none;
 
 
 
@@ -412,7 +448,7 @@ body {
         display: flex;
         justify-content: space-between; 
         width: 100%; 
-        @media (min-width: 769px) {
+        @media (min-width: 1200px) {
           display: none;
 
         }
@@ -478,7 +514,11 @@ body {
         font-size: xx-large;
      }
 
-     @media (min-width: 769px) {
+     @media (min-width: 1200px) {
+
+        background-image: url('../assets/images/placeholdersvgsol.svg');
+        background-repeat: no-repeat;
+        background-position: top 10vh right 30vh;
   
             display: grid;
             grid-template-columns: 1fr 1.1fr 1.1fr 1fr 1fr 1fr 1fr;
