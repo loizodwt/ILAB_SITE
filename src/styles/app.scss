@@ -11,6 +11,11 @@ html {
 }
 
 
+p {
+    max-width: 1200px;
+}
+
+
 
 
 
@@ -442,12 +447,97 @@ body {
 
         }
 
+        &--3{
+            &::after {
+                content: url('../assets/images/decooo.svg');
+                display: block;
+                margin-left: auto;
+                margin-right: 0;
+                margin-top: 3vh;
+                width: fit-content;
+                height: auto;
+              }
+
+              &::before {
+                content: url('../assets/images/decooo.svg');
+                display: block;
+                margin-left:0; 
+                margin-right:auto;
+                margin-top: 3vh;
+                width: fit-content;
+                height: auto;
+                transform: scaleX(-1);
+              }
+
+        }
+
     }
 
     &::after {
         content:"↓";
         font-size: xx-large;
      }
+
+     @media (min-width: 769px) {
+  
+            display: grid;
+            grid-template-columns: 1fr 1.1fr 1.1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas:
+                "number text1 text1 text1 text1 deco ."
+                "title img img textsmall textsmall deco ."
+                "title text3 text3 text3 text3 text3 .";
+    
+                &__number {
+                    grid-area: number;
+                    font-size: 40px;
+                    display: block;
+                    margin: 0 auto;
+                  }
+              
+                  &__title {
+                    grid-area: title;
+                    writing-mode: vertical-rl; 
+                    text-orientation: upright;
+                    display: block;
+                    margin: 0 auto;
+                  }
+    
+            &__text {
+                &--3 {
+                    grid-area: text3; 
+                }
+    
+                &--small {
+                    grid-area: textsmall; 
+                }
+    
+                &--1 {
+                    grid-area: text1; 
+                }
+            }
+    
+            &__img {
+                grid-area: img; 
+            }
+    
+            &__deco {
+                grid-area: deco; 
+            }
+        
+
+            
+    &::after {
+       display: none;
+     }
+
+    }
+    
+
+
+
+
 
 
 
