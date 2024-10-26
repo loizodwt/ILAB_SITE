@@ -281,7 +281,7 @@ p {
     
         &__number {
           grid-area: number;
-          font-size: 40px;
+          font-size: $size-number-desktop;
           display: block;
           margin: 0 auto;
         }
@@ -292,6 +292,7 @@ p {
           text-orientation: upright;
           display: block;
           margin: 0 auto;
+          font-size: $size-title-desktop;
         }
     
         &__text--1 {
@@ -409,7 +410,7 @@ p {
     
             &__number {
                 grid-area: number;
-                font-size: 40px;
+                font-size: $size-number-desktop;
                 display: block;
                 margin: 0 auto;
               }
@@ -420,6 +421,7 @@ p {
                 text-orientation: upright;
                 display: block;
                 margin: 0 auto;
+                font-size: $size-title-desktop;
               }
     
         &__text--1 {
@@ -559,7 +561,7 @@ p {
     
                 &__number {
                     grid-area: number;
-                    font-size: 40px;
+                    font-size: $size-number-desktop;
                     display: block;
                     margin: 0 auto;
                   }
@@ -570,6 +572,7 @@ p {
                     text-orientation: upright;
                     display: block;
                     margin: 0 auto;
+                    font-size: $size-title-desktop;
                   }
     
             &__text {
