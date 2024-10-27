@@ -4,13 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const menu = document.querySelector('.navbar__menu');
     const lines = document.querySelectorAll('.navbar__line'); 
 
-  
     links.forEach(link => {
         link.addEventListener('click', function (e) {
             links.forEach(l => l.classList.remove('active'));
             this.classList.add('active');
 
-        
             if (menu.classList.contains('is-active')) {
                 menu.classList.remove('is-active');
                 toggle.classList.remove('is-active');
