@@ -1,0 +1,165 @@
+
+
+.contexte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+
+    background-image: none;
+
+    
+    &::after {
+        content:"↓";
+        font-size: xx-large;
+     }
+
+
+    .deco_contexte--1{
+        margin: 0;
+        display: flex;
+        justify-content: start;
+      }
+
+  
+    &__number {
+      margin: 0;
+      font-size: $size-number-mobile;
+      margin-bottom: 10px;
+    }
+  
+    &__title {
+      margin: 0;
+      font-size: $size-title-mobile;
+      margin-bottom: 20px;
+    }
+  
+    &__text {
+      font-size: $size-text-mid-mobile;
+      margin-bottom: 15px;
+      
+  
+      &--small {
+        font-size: $size-text-small-mobile;
+        &::after {
+            content: url('../assets/images/croix.svg');
+            display: block;
+            margin: 0 auto; // ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+            margin-top: 3vh;
+            width: fit-content;
+            height: auto;
+          }
+          
+      }
+    }
+
+
+    &__text {
+
+        font-size: $size-text-mid-desktop;
+
+       &--small {
+
+           font-size: $size-text-small-desktop;
+   
+         &::after {
+           content: url('../assets/images/croix.svg');
+           display: block;
+           margin-left: auto;  // ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+           margin-right: 0;
+           margin-top: 3vh;
+           width: fit-content;
+           height: auto;
+           display: none;
+           @media (min-width: 1200px) {
+            display: flex;
+              
+          }
+      
+         }
+       }
+
+       &--3 {
+
+        &::before {
+            content: url('../assets/images/croix.svg');
+            display: block;
+            margin: 0%;
+            margin-right: auto; 
+            margin-left: auto;
+            margin-bottom: 10%;
+            width: fit-content;
+            height: auto;
+            @media (min-width: 1200px) {
+                display: none;
+                  
+              }
+          
+          }
+       
+        }
+     }
+
+
+    @media (min-width: 1200px) {
+        background-image: url('../assets/images/section1.svg');
+        background-repeat: no-repeat;
+        background-position: top 10vh right ;
+        background-size: 300px 300px;
+        
+
+
+
+        margin-top: 10vh;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
+        gap: 0px;
+        grid-template-areas:
+          "number text-1 text-1 . . . "
+          "title text2 text2 . . . "
+          "title . .  text3 text3 ."; 
+    
+        &__number {
+          grid-area: number;
+          font-size: $size-number-desktop;
+          display: block;
+          margin: 0 auto;
+        }
+    
+        &__title {
+          grid-area: title;
+          writing-mode: vertical-rl; 
+          text-orientation: upright;
+          display: block;
+          margin: 0 auto;
+          font-size: $size-title-desktop;
+        }
+    
+        &__text--1 {
+          grid-area: text-1;
+        }
+    
+        &__text--2 {
+          grid-area: text2;
+        }
+    
+        &__text--3 {
+          grid-area: text3;
+        }
+
+        
+      &::after {
+        display: none;
+      }
+ 
+    }
+    
+
+
+
+
+  }
+  
+
