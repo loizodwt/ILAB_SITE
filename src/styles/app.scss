@@ -126,8 +126,9 @@ p {
         &.is-active {
             visibility: visible;
             transform: translateX(0); 
+            z-index: 9998; 
         }
-    s
+    
 
 
     &__toggle {
@@ -272,8 +273,34 @@ p {
            margin-top: 3vh;
            width: fit-content;
            height: auto;
+           display: none;
+           @media (min-width: 1200px) {
+            display: flex;
+              
+          }
+      
          }
        }
+
+       &--3 {
+
+        &::before {
+            content: url('../assets/images/croix.svg');
+            display: block;
+            margin: 0%;
+            margin-right: auto; 
+            margin-left: auto;
+            margin-bottom: 10%;
+            width: fit-content;
+            height: auto;
+            @media (min-width: 1200px) {
+                display: none;
+                  
+              }
+          
+          }
+       
+        }
      }
 
 
@@ -517,6 +544,7 @@ p {
         }
 
         &--3{
+            z-index: -1;
             &::after {
                 content: url('../assets/images/decooo.svg');
                 display: block;
