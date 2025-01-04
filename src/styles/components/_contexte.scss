@@ -1,165 +1,173 @@
-
-
 .contexte {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
 
-    background-image: none;
+  background-image: none;
 
-    
-    &::after {
-        content:"↓";
-        font-size: xx-large;
-     }
-
-
-    .deco_contexte--1{
-        margin: 0;
-        display: flex;
-        justify-content: start;
-      }
-
-  
-    &__number {
-      margin: 0;
-      font-size: $size-number-mobile;
-      margin-bottom: 10px;
-    }
-  
-    &__title {
-      margin: 0;
-      font-size: $size-title-mobile;
-      margin-bottom: 20px;
-    }
-  
-    &__text {
-      font-size: $size-text-mid-mobile;
-      margin-bottom: 15px;
-      
-  
-      &--small {
-        font-size: $size-text-small-mobile;
-        &::after {
-            content: url('../assets/images/croix.svg');
-            display: block;
-            margin: 0 auto; // ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-            margin-top: 3vh;
-            width: fit-content;
-            height: auto;
-          }
-          
-      }
-    }
-
-
-    &__text {
-
-        font-size: $size-text-mid-desktop;
-
-       &--small {
-
-           font-size: $size-text-small-desktop;
-   
-         &::after {
-           content: url('../assets/images/croix.svg');
-           display: block;
-           margin-left: auto;  // ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-           margin-right: 0;
-           margin-top: 3vh;
-           width: fit-content;
-           height: auto;
-           display: none;
-           @media (min-width: 1200px) {
-            display: flex;
-              
-          }
-      
-         }
-       }
-
-       &--3 {
-
-        &::before {
-            content: url('../assets/images/croix.svg');
-            display: block;
-            margin: 0%;
-            margin-right: auto; 
-            margin-left: auto;
-            margin-bottom: 10%;
-            width: fit-content;
-            height: auto;
-            @media (min-width: 1200px) {
-                display: none;
-                  
-              }
-          
-          }
-       
-        }
-     }
-
-
-    @media (min-width: 1200px) {
-        background-image: url('../assets/images/section1.svg');
-        background-repeat: no-repeat;
-        background-position: top 10vh right ;
-        background-size: 300px 300px;
-        
-
-
-
-        margin-top: 10vh;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr); 
-        grid-template-rows: repeat(3, 1fr); 
-        gap: 0px;
-        grid-template-areas:
-          "number text-1 text-1 . . . "
-          "title text2 text2 . . . "
-          "title . .  text3 text3 ."; 
-    
-        &__number {
-          grid-area: number;
-          font-size: $size-number-desktop;
-          display: block;
-          margin: 0 auto;
-        }
-    
-        &__title {
-          grid-area: title;
-          writing-mode: vertical-rl; 
-          text-orientation: upright;
-          display: block;
-          margin: 0 auto;
-          font-size: $size-title-desktop;
-        }
-    
-        &__text--1 {
-          grid-area: text-1;
-        }
-    
-        &__text--2 {
-          grid-area: text2;
-        }
-    
-        &__text--3 {
-          grid-area: text3;
-        }
-
-        
-      &::after {
-        display: none;
-      }
- 
-    }
-    
-
-
-
-
+  &::after {
+    content: "↓";
+    font-size: xx-large;
   }
-  
 
+  .deco_contexte--1 {
+    margin: 0;
+    display: flex;
+    justify-content: start;
+  }
+
+  &__number {
+    margin: 0;
+    font-size: $size-number-mobile;
+    margin-bottom: 10px;
+  }
+
+  &__deco,
+  &__deco2 {
+    display: none;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $size-title-mobile;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: $size-text-mid-mobile;
+    margin-bottom: 15px;
+
+    &--small {
+      font-size: $size-text-small-mobile;
+      &::after {
+        content: url("../assets/images/croix.svg");
+        display: block;
+        margin: 0 auto; // ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+        margin-top: 3vh;
+        width: fit-content;
+        height: auto;
+      }
+    }
+  }
+
+  &__text {
+    font-size: $size-text-mid-desktop;
+
+    &--small {
+      font-size: $size-text-small-desktop;
+
+      &::after {
+        content: url("../assets/images/croix.svg");
+        display: block;
+        margin-left: auto; // ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+        margin-right: 0;
+        margin-top: 3vh;
+        width: fit-content;
+        height: auto;
+        display: none;
+        @media (min-width: 1200px) {
+          display: flex;
+        }
+      }
+    }
+
+    &--3 {
+      &::before {
+        content: url("../assets/images/croix.svg");
+        display: block;
+        margin: 0%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 10%;
+        width: fit-content;
+        height: auto;
+        @media (min-width: 1200px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    background-image: url("../assets/images/section1.svg");
+    background-repeat: no-repeat;
+    background-position: top right; // Colle l'image à droite
+    background-size: contain; // Prend toute la hauteur et largeur disponibles
+    height: 80vh;
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+    grid-template-areas:
+      "number text-1 text-1 deco1 deco1 . "
+      "title text2 text2 deco1 deco1 . "
+      "title deco2 deco2 text3 text3 .";
+
+    // Assure que la section prend toute la hauteur de l'écran
+
+    &__number {
+      grid-area: number;
+      font-size: $size-number-desktop;
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__title {
+      grid-area: title;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      display: block;
+      margin: 0 auto;
+      font-size: $size-title-desktop;
+    }
+
+    &__text--1 {
+      grid-area: text-1;
+    }
+
+    &__text--2 {
+      grid-area: text2;
+    }
+
+    &__text--3 {
+      grid-area: text3;
+    }
+
+    &__deco img {
+      grid-area: deco1;
+    }
+    &__deco {
+      display: block;
+      grid-area: deco1;
+      width: 300px;
+      margin-right: auto;
+      margin-left: 10vh; // Ajuste la taille de l'image si nécessaire
+      height: auto;
+    }
+
+    &__deco2 {
+      display: block;
+      grid-area: deco2;
+      width: 300px;
+      margin-left: auto;
+      margin-right: 10vh; // Ajuste la taille de l'image si nécessaire
+      height: auto;
+      transform: rotate(
+        180deg
+      ); // Applique la rotation de 180 degrés à l'élément
+    }
+
+    &__deco2 img {
+      transform: rotate(
+        180deg
+      ); // Applique la même rotation de 180 degrés à l'image
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}

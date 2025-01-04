@@ -1,91 +1,89 @@
-
-
-
 .userjourney {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+
+  &__number {
+    margin: 0;
+    font-size: $size-number-mobile;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $size-title-mobile;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    background-image: url("../assets/images/usermobile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  @media (min-width: 768px) {
+    &__img {
+      background-image: url("../assets/images/usertablet.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 80vh;
+      width: 100%;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    grid-template-areas:
+      "number img img img img img"
+      "title img img img img img"
+      "title img img img img img";
 
     &__number {
-        margin: 0%;
-        font-size: $size-number-mobile;
-        margin-bottom: 10px;
+      grid-area: number;
+      font-size: $size-number-desktop;
+      display: block;
+      margin: 0 auto;
     }
 
     &__title {
-        margin: 0%;
-        font-size: $size-title-mobile;
-        margin-bottom: 20px;
+      grid-area: title;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      display: block;
+      margin: 0 auto;
+      font-size: $size-title-desktop;
     }
-
 
     &__img {
-        background-image: url('../assets/images/usermobile.svg');
-        background-size: auto 100%; 
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100vh; 
-        width: 100vh;
-    
+      grid-area: img;
+      background-image: url("../assets/images/userdesktop.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100%;
+      width: 100%;
+      animation: fadeIn 1.5s ease-in-out;
     }
+  }
 
-
-
-
-
-    @media (min-width: 1200px) {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 0;
-        grid-template-areas:
-            "number img img img img img"
-            "title img img img img img"
-            "title img img img img img";
-
-      
-            &__number {
-                grid-area: number;
-                font-size: $size-number-desktop;
-                display: block;
-                margin: 0 auto;
-              }
-          
-              &__title {
-                grid-area: title;
-                writing-mode: vertical-rl; 
-                text-orientation: upright;
-                display: block;
-                margin: 0 auto;
-                font-size: $size-title-desktop;
-              }
-
-              &__img {
-                grid-area: img;
-                background-image: url('../assets/images/userdesktop.svg');
-                background-size: auto 100%; 
-                background-repeat: no-repeat;
-                background-position: left;
-              
-                height: 100%; 
-                width: 100%; 
-            
-            }
-
-
-
-
-
-
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
     }
-
-
-
-
-
+    to {
+      opacity: 1;
+    }
+  }
 }
-
-
