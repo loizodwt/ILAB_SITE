@@ -95,8 +95,9 @@
     background-repeat: no-repeat;
     background-position: top right; // Colle l'image à droite
     background-size: contain; // Prend toute la hauteur et largeur disponibles
-    height: 80vh;
+    height: 550px;
     margin-top: 10vh;
+    margin-bottom: 10vh;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, 1fr);

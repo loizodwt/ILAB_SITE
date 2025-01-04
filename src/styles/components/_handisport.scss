@@ -1,121 +1,97 @@
-
-
-
 .handisport {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+
+  &__number {
+    margin: 0%;
+    font-size: $size-number-mobile;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin: 0%;
+    font-size: $size-title-mobile;
+    margin-bottom: 20px;
+  }
+
+  &__croix {
+    padding: 40px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    color: #fff;
+    justify-content: space-between;
+
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-size: $size-text-mid-mobile;
+    margin-bottom: 15px;
+
+    &--big {
+      font-size: $size-text-big-mobile;
+    }
+  }
+
+  &::after {
+    content: "↓";
+    font-size: xx-large;
+  }
+
+  @media (min-width: 1200px) {
+    background-image: url("../../assets/images/sidesection2.png");
+    background-repeat: no-repeat;
+    background-position: top right; // Colle l'image à droite
+    background-size: contain; // Prend toute la hauteur et largeur disponibles
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+    max-height: 550px;
+    grid-template-areas:
+      "number handisport__text--1 handisport__text--1 handisport__text--1 . . "
+      "title handisport__img handisport__img handisport__img . . "
+      "title  handisport__text--big handisport__text--big handisport__text--big . . ";
 
     &__number {
-        margin: 0%;
-        font-size: $size-number-mobile;
-        margin-bottom: 10px;
+      grid-area: number;
+      font-size: $size-number-desktop;
+      display: block;
+      margin: 0 auto;
     }
 
     &__title {
-        margin: 0%;
-        font-size: $size-title-mobile;
-        margin-bottom: 20px;
+      grid-area: title;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      display: block;
+      margin: 0 auto;
+      font-size: $size-title-desktop;
     }
 
-    &__text {
-        font-size: $size-text-mid-mobile; 
-        margin-bottom: 15px;
+    &__text--1 {
+      grid-area: handisport__text--1;
+      font-size: $size-text-mid-desktop;
+    }
 
-       
-        &--1 {
-            
-          &::before {
-            content: url('../assets/images/croix.svg');
-            display: block;
-            margin-left: auto;  // ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-            margin-right: 0;
-            margin-top: 3vh;
-            width: fit-content;
-            height: auto;
-          }
-            
-        }
+    &__img {
+      grid-area: handisport__img;
+    }
 
-
-        &--big {
-            font-size: $size-text-big-mobile; 
-        }
-
-
-
+    &__text--big {
+      grid-area: handisport__text--big;
+      font-size: $size-text-big-desktop;
+      font-weight: bold;
     }
 
     &::after {
-        content:"↓";
-        font-size: xx-large;
-     }
-
-
-     
-
-
-     @media (min-width: 1200px) {
-
-        display: grid;
-        grid-template-columns: repeat(6, 1fr); 
-        grid-template-rows: repeat(3, 1fr); 
-        gap: 0px;
-        grid-template-areas:
-            "number handisport__text--1 handisport__text--1 handisport__text--1 . . "
-            "title handisport__img handisport__img handisport__img . . "
-            "title  handisport__text--big handisport__text--big handisport__text--big . . ";
-    
-            &__number {
-                grid-area: number;
-                font-size: $size-number-desktop;
-                display: block;
-                margin: 0 auto;
-              }
-          
-              &__title {
-                grid-area: title;
-                writing-mode: vertical-rl; 
-                text-orientation: upright;
-                display: block;
-                margin: 0 auto;
-                font-size: $size-title-desktop;
-              }
-    
-        &__text--1 {
-            grid-area: handisport__text--1;
-            font-size: $size-text-mid-desktop;
-        }
-    
-        &__img {
-            grid-area: handisport__img;
-        }
-    
-        &__text--big {
-            grid-area: handisport__text--big;
-            font-size: $size-text-big-desktop;
-            font-weight: bold;
-        }
-    
-    
-
-
-
-        &::after {
-            display: none;
-         }
-    
-
-
-
-        }
-
-
-
-
-
-
-     
+      display: none;
+    }
+  }
 }

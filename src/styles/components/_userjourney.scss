@@ -22,18 +22,19 @@
     background-image: url("../assets/images/usermobile.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     height: 100vh;
     width: 100vw;
     animation: fadeIn 1.5s ease-in-out;
   }
 
   @media (min-width: 768px) {
+    margin-bottom: 10vh;
     &__img {
       background-image: url("../assets/images/usertablet.png");
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: top center;
       height: 80vh;
       width: 100%;
       animation: fadeIn 1.5s ease-in-out;
@@ -71,7 +72,7 @@
       background-image: url("../assets/images/userdesktop.png");
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: top center;
       height: 100%;
       width: 100%;
       animation: fadeIn 1.5s ease-in-out;
