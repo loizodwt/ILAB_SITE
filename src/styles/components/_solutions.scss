@@ -10,6 +10,8 @@
   &__deco {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2.5vh;
+    padding-top: 2.5vh;
     width: 100%;
     @media (min-width: 1200px) {
       display: none;
@@ -38,17 +40,16 @@
 
   &__text {
     margin-bottom: 15px;
-    max-width: 1000px;
 
     &--small {
       font-size: 0.8rem;
     }
 
     &--3 {
-      margin-left: 5vh;
       z-index: -1;
+      margin-left: 30px;
       &::after {
-        content: url("../assets/images/decooo.svg");
+        content: url("../assets/images/decosemifleche.svg");
         display: block;
         margin-left: auto;
         margin-right: 0;
@@ -58,7 +59,7 @@
       }
 
       &::before {
-        content: url("../assets/images/decooo.svg");
+        content: url("../assets/images/decosemifleche.svg");
         display: block;
         margin-left: 0;
         margin-right: auto;
@@ -66,13 +67,22 @@
         width: fit-content;
         height: auto;
         transform: scaleX(-1);
+        position: relative;
+        top: 10px;
+        left: -30px;
       }
     }
   }
 
   &::after {
-    content: "↓";
-    font-size: xx-large;
+    content: "";
+    display: block;
+    width: 10vh;
+    height: 10vh;
+    background: url("../../assets/images/flechebas.svg") no-repeat center;
+    background-size: contain;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }
 
   @media (min-width: 1200px) {

@@ -37,8 +37,14 @@
   }
 
   &::after {
-    content: "↓";
-    font-size: xx-large;
+    content: "";
+    display: block;
+    width: 10vh;
+    height: 10vh;
+    background: url("../../assets/images/flechebas.svg") no-repeat center;
+    background-size: contain;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }
 
   @media (min-width: 1200px) {

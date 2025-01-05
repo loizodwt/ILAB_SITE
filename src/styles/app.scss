@@ -1,56 +1,68 @@
-@import 'utils/variables';
-@import 'components/type';
-@import 'components/fonts';
-@import 'components/nav';
-@import 'components/footer';
-@import 'components/contexte';
-@import 'components/handisport';
-@import 'components/solutions';
-@import 'components/userjourney';
+@import "utils/variables";
+@import "components/type";
+@import "components/fonts";
+@import "components/nav";
+@import "components/footer";
+@import "components/contexte";
+@import "components/handisport";
+@import "components/solutions";
+@import "components/userjourney";
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    color: white;
-    font-family: 'ClashDisplay';
+  margin: 0;
+  color: white;
+  font-family: "ClashDisplay";
 
-    &.no-scroll {
-        overflow: hidden;
-    }
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 p {
-    max-width: 800px;
-    font-family: "Atkinson Hyperlegible", "Clash Display";
-    line-height: 150%;
+  max-width: 800px;
+  font-family: "Atkinson Hyperlegible", "Clash Display";
+  line-height: 150%;
+}
+
+main {
+  padding: 0%;
+
+  @media (min-width: 600px) {
+    padding-right: 10vw;
+    padding-left: 10vw;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0%;
+  }
 }
 
 .video-background {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
 }
 
 .main__title {
-    display: flex;
-    justify-content: center;
-    margin-top: 10vh;
-    margin-bottom: 0;
-    font-size: 38px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  margin-bottom: 0;
+  font-size: 38px;
 
-    @media (min-width: 1200px) {
-        font-size: 64px;
-    }
+  @media (min-width: 1200px) {
+    font-size: 64px;
+  }
 }
 
-
-      
+// GSAP

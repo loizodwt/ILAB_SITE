@@ -8,8 +8,14 @@
   background-image: none;
 
   &::after {
-    content: "↓";
-    font-size: xx-large;
+    content: "";
+    display: block;
+    width: 10vh;
+    height: 10vh;
+    background: url("../../assets/images/flechebas.svg") no-repeat center;
+    background-size: contain;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }
 
   .deco_contexte--1 {
@@ -29,6 +35,28 @@
     display: none;
   }
 
+  &__deco-start &__deco-end {
+    display: flex;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  &__deco-end {
+    align-self: flex-end;
+  }
+
+  &__deco-start {
+    align-self: flex-start;
+  }
+
+  &__deco-start img {
+    transform: rotate(180deg);
+    width: 30px;
+  }
+  &__deco-end img {
+    width: 30px;
+  }
+
   &__title {
     margin: 0;
     font-size: $size-title-mobile;
@@ -38,18 +66,6 @@
   &__text {
     font-size: $size-text-mid-mobile;
     margin-bottom: 15px;
-
-    &--small {
-      font-size: $size-text-small-mobile;
-      &::after {
-        content: url("../assets/images/croix.svg");
-        display: block;
-        margin: 0 auto; // ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-        margin-top: 3vh;
-        width: fit-content;
-        height: auto;
-      }
-    }
   }
 
   &__text {
@@ -61,7 +77,7 @@
       &::after {
         content: url("../assets/images/croix.svg");
         display: block;
-        margin-left: auto; // ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+        margin-left: auto;
         margin-right: 0;
         margin-top: 3vh;
         width: fit-content;
@@ -93,21 +109,21 @@
   @media (min-width: 1200px) {
     background-image: url("../assets/images/section1.svg");
     background-repeat: no-repeat;
-    background-position: top right; // Colle l'image à droite
-    background-size: contain; // Prend toute la hauteur et largeur disponibles
-    height: 550px;
+    background-position: top right;
+    background-size: contain;
+    height: 700px;
     margin-top: 10vh;
     margin-bottom: 10vh;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     gap: 0px;
     grid-template-areas:
+      ". . . . . deco-end"
       "number text-1 text-1 deco1 deco1 . "
       "title text2 text2 deco1 deco1 . "
-      "title deco2 deco2 text3 text3 .";
-
-    // Assure que la section prend toute la hauteur de l'écran
+      "title deco2 deco2 text3 text3 ."
+      ". deco-start . . . . ";
 
     &__number {
       grid-area: number;
@@ -145,7 +161,7 @@
       grid-area: deco1;
       width: 300px;
       margin-right: auto;
-      margin-left: 10vh; // Ajuste la taille de l'image si nécessaire
+      margin-left: 10vh;
       height: auto;
     }
 
@@ -154,17 +170,22 @@
       grid-area: deco2;
       width: 300px;
       margin-left: auto;
-      margin-right: 10vh; // Ajuste la taille de l'image si nécessaire
+      margin-right: 10vh;
       height: auto;
-      transform: rotate(
-        180deg
-      ); // Applique la rotation de 180 degrés à l'élément
+      transform: rotate(180deg);
     }
 
     &__deco2 img {
-      transform: rotate(
-        180deg
-      ); // Applique la même rotation de 180 degrés à l'image
+      transform: rotate(180deg);
+    }
+
+    &__deco-end {
+      grid-area: deco-end;
+      display: block;
+    }
+
+    &__deco-start {
+      grid-area: deco-start;
     }
 
     &::after {
