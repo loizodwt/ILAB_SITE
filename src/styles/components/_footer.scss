@@ -1,29 +1,26 @@
-
 footer {
-  padding: 20px 0; 
+  padding: 20px 0;
 
   .footer-content {
-      display: flex; 
-      justify-content: space-between; 
-      max-width: 1200px;
-      margin: 0 auto; 
-      padding: 0 20px; 
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   .footer-item {
-      flex: 1; 
-      text-align: center;
-      height: 20px;
-      width: auto;
+    flex: 1;
+    text-align: center;
+    height: 20px;
+    width: auto;
 
-      svg {
-         
-          height: 100%; 
-          width: auto; 
-      }
+    svg {
+      height: 100%;
+      width: auto;
+    }
   }
   .dwt path {
-      fill: white; 
+    fill: white;
   }
-  
 }
