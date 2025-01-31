@@ -13,9 +13,11 @@
     margin-bottom: 2.5vh;
     padding-top: 2.5vh;
     width: 100%;
+
     @media (min-width: 1200px) {
       display: none;
     }
+
     &--1,
     &--2 {
       margin: 0;
@@ -48,6 +50,7 @@
     &--3 {
       z-index: -1;
       margin-left: 30px;
+
       &::after {
         content: url("../assets/images/decosemifleche.svg");
         display: block;
@@ -88,7 +91,7 @@
   @media (min-width: 1200px) {
     max-height: 550px;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: 1fr repeat(5, minmax(0, 200px)) 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 0px;
     margin-top: 20vh;
@@ -119,10 +122,12 @@
         grid-area: text1;
         font-size: 20px;
       }
+
       &--small {
         grid-area: textsmall;
         font-size: 16px;
       }
+
       &--3 {
         grid-area: text3;
         font-size: 20px;

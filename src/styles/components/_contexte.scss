@@ -53,6 +53,7 @@
     transform: rotate(180deg);
     width: 30px;
   }
+
   &__deco-end img {
     width: 30px;
   }
@@ -83,6 +84,7 @@
         width: fit-content;
         height: auto;
         display: none;
+
         @media (min-width: 1200px) {
           display: flex;
         }
@@ -99,6 +101,7 @@
         margin-bottom: 10%;
         width: fit-content;
         height: auto;
+
         @media (min-width: 1200px) {
           display: none;
         }
@@ -107,7 +110,7 @@
   }
 
   @media (min-width: 1200px) {
-    background-image: url("../assets/images/section1.svg");
+    background-image: url("../assets/images/ctxcercle.svg");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: contain;
@@ -115,7 +118,7 @@
     margin-top: 10vh;
     margin-bottom: 10vh;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1fr repeat(4, minmax(0, 250px)) 1fr; 
     grid-template-rows: repeat(5, 1fr);
     gap: 0px;
     grid-template-areas:
@@ -156,6 +159,7 @@
     &__deco img {
       grid-area: deco1;
     }
+
     &__deco {
       display: block;
       grid-area: deco1;

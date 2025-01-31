@@ -50,13 +50,13 @@
   @media (min-width: 1200px) {
     background-image: url("../../assets/images/sidesection2.png");
     background-repeat: no-repeat;
-    background-position: top right; 
-    background-size: contain; 
+    background-position: top right;
+    background-size: contain;
     margin-top: 20vh;
     margin-bottom: 20vh;
 
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1fr repeat(4, minmax(0, 250px)) 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 0px;
     max-height: 550px;

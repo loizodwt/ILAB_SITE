@@ -23,7 +23,7 @@ body {
 }
 
 p {
-  max-width: 800px;
+
   font-family: "Atkinson Hyperlegible", "Clash Display";
   line-height: 150%;
 }
@@ -57,7 +57,7 @@ main {
   display: flex;
   justify-content: center;
   margin-top: 10vh;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
   font-size: 38px;
 
   @media (min-width: 1200px) {
