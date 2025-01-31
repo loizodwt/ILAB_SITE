@@ -73,6 +73,7 @@
     font-size: $size-text-mid-desktop;
 
     &--small {
+      font-style: italic;
       font-size: $size-text-small-desktop;
 
       &::after {
@@ -118,7 +119,7 @@
     margin-top: 10vh;
     margin-bottom: 10vh;
     display: grid;
-    grid-template-columns: 1fr repeat(4, minmax(0, 250px)) 1fr; 
+    grid-template-columns: 1fr repeat(4, minmax(0, 250px)) 1fr;
     grid-template-rows: repeat(5, 1fr);
     gap: 0px;
     grid-template-areas:
