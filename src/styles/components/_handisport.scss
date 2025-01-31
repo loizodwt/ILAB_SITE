@@ -17,6 +17,15 @@
     margin-bottom: 20px;
   }
 
+  &__img {
+    width: 100%;
+    max-width: 50vh;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+
   &__croix {
     padding: 40px;
     display: flex;
