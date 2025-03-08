@@ -15,7 +15,7 @@ html {
 body {
   margin: 0;
   color: white;
-  font-family: "ClashDisplay";
+  font-family: 'ClashDisplay', sans-serif;
 
   &.no-scroll {
     overflow: hidden;
@@ -64,5 +64,7 @@ main {
     font-size: 64px;
   }
 }
+
+
 
 // GSAP

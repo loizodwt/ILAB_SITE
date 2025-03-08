@@ -24,6 +24,10 @@
     }
   }
 
+  &__img {
+    display: none;
+  }
+
   &__deco-img {
     display: none;
   }
@@ -136,6 +140,7 @@
 
     &__img {
       grid-area: img;
+      display: none; //supp ici
     }
 
     &__deco {
@@ -150,6 +155,7 @@
 
     &__deco-img img {
       grid-area: deco-img;
+      display: none; //supp ici
     }
 
     &::after {

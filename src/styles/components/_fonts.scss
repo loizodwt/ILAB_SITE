@@ -1,5 +1,33 @@
+
+
+
+
+
+
 @font-face {
   font-family: 'ClashDisplay';
-  src: url('../../assets/fonts/ClashDisplay-Variable.ttf') ;
+  src: url('../assets/fonts/OTF/ClashDisplay-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'ClashDisplay';
+  src: url('../assets/fonts/OTF/ClashDisplay-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay';
+  src: url('../assets/fonts/OTF/ClashDisplay-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ClashDisplay';
+  src: url('../assets/fonts/OTF/ClashDisplay-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
